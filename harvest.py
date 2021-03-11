@@ -11,17 +11,30 @@ class MelonType(object):
         """Initialize a melon."""
 
         self.pairings = []
+        self.code = code 
+        self.first_harvest = year 
+        self.color = color
+        self.is_seedless = is_seedless
+        self.is_bestseller = is_bestseller
+        self.name = name  
+       
+     
+        
+        #
 
         # Fill in the rest
 
     def add_pairing(self, pairing):
         """Add a food pairing to the instance's pairings list."""
-
+        #If statement? If self(MelonType) has a pair then append the pair to the pairing list, else continue 
         # Fill in the rest
+        self.pairings.append(pairing)
+        
 
     def update_code(self, new_code):
         """Replace the reporting code with the new_code."""
-
+        #
+        self.code = new_code
         # Fill in the rest
 
 
@@ -29,7 +42,11 @@ def make_melon_types():
     """Returns a list of current melon types."""
 
     all_melon_types = []
-
+    musk = Melontype("musk","1998","green",True, True, "Muskmelon")
+    musk.addpairing("mint")
+    cas = Melontype("cas", "2003", "orange", True, False, "Casaba")
+    cren = Melontype("cren", "1996", "green", False, False, "Crenshaw") 
+    yw = Melontype("yw", "2013", "yellow", False, True, "Yellow Watermelon")
     # Fill in the rest
 
     return all_melon_types
